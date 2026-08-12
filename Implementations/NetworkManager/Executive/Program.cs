@@ -11,7 +11,7 @@ namespace Executive
             //ICommunicator communicator = factory.Communicator("LAN");
             ICommunicator communicator = factory.Communicator("WIFI");
 
-            communicator.SendData("192.168.1.800", "Hello World!");
+            communicator.SendData("192.168.1.100", "Hello World!");
 
             Console.WriteLine($"Message sent : {communicator.GetCount()}");
         }

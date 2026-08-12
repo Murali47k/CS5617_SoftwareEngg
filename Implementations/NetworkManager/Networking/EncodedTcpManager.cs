@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,16 @@ namespace Networking
 {
     public class EncodedTcpManager : TcpManager
     {
-        private int count = 0;
 
         public override void SendData(string addr, string data)
         {
             string encodedData = Encoder(data);
-            Console.WriteLine($"Encoded Data : {encodedData}");
 
-            string decodedData = Decoder(encodedData);
-            Console.WriteLine($"Sending data : {decodedData} via TCP in LAN to {addr} with Encoding and Decoding");
+            Debug.WriteLine($"Encoded Data: {encodedData}");
+
+            Debug.WriteLine(
+                $"Sending encoded data via TCP in LAN to {addr}"
+            );
             count++;
         }
 

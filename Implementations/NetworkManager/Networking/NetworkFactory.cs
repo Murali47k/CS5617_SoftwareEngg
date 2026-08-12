@@ -20,7 +20,10 @@ namespace Networking
             }
             else
             {
-                throw new ArgumentNullException("Invalid type");
+                throw new ArgumentException(
+                    $"Unsupported communication type: {type}",
+                    nameof(type)
+                );
             }
             
 
