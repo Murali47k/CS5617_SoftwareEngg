@@ -88,9 +88,9 @@
 
 - Add Listener capabilities for Network Manager made in Lec 2
 
----
+- Use FileWatcher to Listen on a file by Network Manager , and bubble the message for Network and put it in console app UX. 
 
-### Next Lecture Upcoming
+---
 
 
 

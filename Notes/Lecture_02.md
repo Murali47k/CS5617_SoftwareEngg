@@ -83,10 +83,3 @@ Types are implementations and classes
 - Then Draw the class diagram between all classes as a PNG
 
 ---
-
-### Next Lecture Upcoming
-
-- 5 principles of OOPs
-- Look up Solid Principles
-- More on Class Diagram
-- More Design patterns
