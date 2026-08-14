@@ -5,5 +5,7 @@
         void SendData(string addr,string data);
 
         int GetCount();
+
+        void Subscribe(IMessageListener l);
     }
 }

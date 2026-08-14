@@ -11,16 +11,22 @@ namespace Networking
     {
         
          private int count = 0;
+         public IMessageListener listener;
          public virtual void SendData(string addr, string data)
-          {
+         {
             Debug.WriteLine($"Sending data via HTTP in WIFI to {addr}");
             count++;
-          }
+         }
 
          public int GetCount()
          {
              return count;
          }
-       
+
+         public void Subscribe(IMessageListener l)
+         {
+            listener = l;
+         }
+
     }
 }
