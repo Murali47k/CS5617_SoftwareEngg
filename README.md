@@ -19,10 +19,17 @@ This repository contains the coursework, assignments, and projects completed as 
 
 ```text
 .
-├── Lec 1 : Persistance/
-|
-├── Lec 2 : NetworkManager/
-
+├── Lec 1 -> Persistence/
+│
+├── Lec 2 -> NetworkManager/
+│
+├── Lec 3
+│   ├── NetworkManager/
+│   │       └── Added Message Listener
+│   │
+│   └── DistributedGUI/
+│           └── UML Diagrams
+.
 ```
 
 - All work is done via C# in Visual Studio 2022

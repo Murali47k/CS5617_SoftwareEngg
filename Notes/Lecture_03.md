@@ -86,6 +86,8 @@
 
 - Write a simple design document for each times as markdown for the main all class project
 
+- Add Listener capabilities for Network Manager made in Lec 2
+
 ---
 
 ### Next Lecture Upcoming
