@@ -54,15 +54,37 @@
     - Example : Chain of Responsibility , Command , Interpreter , Iterator , Mediator , Memento , Observer , State , Stratergy , Template Methord , Visitor
 ---
 
+### Software Development Life Cycle (SDLC)
+
+1. Gathering requiremnets
+1. Writing specifications documents
+1. Architecture and design
+1. Development
+1. Integration 
+1. Testing and Validation 
+1. Development 
+1. Maintenance
+
+--- 
+### Common SDLC Models 
+
+- Waterfall : all in one go methord and thoroughly planned , mostly used creating softawre like Linux , Kernel etc
+- Agile : With continuos customer feedack and always changing , mostly used in Web Dev 
+- Nowadays most companies prefer to choose a model which is roughly the hybrid of both
+
+---
+
 ### Home Work (Not Graded)
 
 - Learn more about UML 
 
-- Distributed GUI in C# (sample project) make
+- Distributed GUI in C# (https://github.com/chittur/distributed-and-gui-demo) make
     1. Class diagram
     1. Module diagram
     1. Activity diagram 
 
+
+- Write a simple design document for each times as markdown for the main all class project
 
 ---
 
