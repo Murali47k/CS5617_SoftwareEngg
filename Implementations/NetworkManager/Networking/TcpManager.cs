@@ -13,10 +13,23 @@ namespace Networking
     {
         protected int count = 0;
         public IMessageListener listener;
-        public virtual void SendData(string addr,string data)
+        public virtual void SendData(string addr, string data)
         {
-            Debug.WriteLine($"Sending data via TCP in LAN to {addr}");
-            count++;
+            try
+            {
+                using TcpClient client = new TcpClient();
+                client.Connect(addr, 5000);
+                using StreamWriter writer = new StreamWriter(client.GetStream());
+                writer.WriteLine(data);
+                writer.Flush();
+
+                Debug.WriteLine($"Sending data via TCP in LAN to {addr}");
+                count++;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to send data: {ex.Message}");
+            }
         }
 
         public int GetCount() 
@@ -34,7 +47,7 @@ namespace Networking
             Task.Run(() => ListentoData(addr));
         }
 
-        public void ListentoData(string addr)
+        public virtual void ListentoData(string addr)
         {
             TcpListener tcpListener = new TcpListener(IPAddress.Parse(addr), 5000);
 
@@ -50,7 +63,6 @@ namespace Networking
 
                 string message = reader.ReadLine();
 
-                count++;
 
                 if (listener != null)
                 {

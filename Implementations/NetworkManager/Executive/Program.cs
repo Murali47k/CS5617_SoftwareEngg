@@ -17,12 +17,20 @@ namespace Executive
             NetworkFactory factory = new NetworkFactory();
             Listener listener = new Listener();
 
-            //ICommunicator communicator = factory.Communicator("WIFI");
-            ICommunicator communicator = factory.Communicator("LAN");
+            ICommunicator communicator = factory.Communicator("WIFI");
+            //ICommunicator communicator = factory.Communicator("LAN");
             communicator.Subscribe(listener);
-            communicator.SendData("192.168.1.100", "Hello World!");
 
-            Console.WriteLine($"Message sent : {communicator.GetCount()}");
+            string addr = "127.0.0.1";
+            communicator.Listen(addr);
+            Thread.Sleep(500); 
+            // give the listener time to start before sending
+
+            communicator.SendData(addr, "Hello World!");
+            Thread.Sleep(500); 
+            // give the listener time to receive before checking count
+
+            Console.WriteLine($"Total count : {communicator.GetCount()}");
         }
     }
 }

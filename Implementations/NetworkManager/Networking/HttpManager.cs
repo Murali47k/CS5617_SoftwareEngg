@@ -51,8 +51,6 @@ namespace Networking
 
                 string message = reader.ReadLine();
 
-                count++;
-
                 if (listener != null)
                 {
                     listener.OnMessageReceived(message);
