@@ -81,7 +81,6 @@
 - Distributed GUI in C# (https://github.com/chittur/distributed-and-gui-demo) make
     1. Class diagram
     1. Module diagram
-    1. Activity diagram 
 
 
 - Write a simple design document for each times as markdown for the main all class project
