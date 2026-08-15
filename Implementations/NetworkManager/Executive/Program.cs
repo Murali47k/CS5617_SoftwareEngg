@@ -17,8 +17,8 @@ namespace Executive
             NetworkFactory factory = new NetworkFactory();
             Listener listener = new Listener();
 
-            ICommunicator communicator = factory.Communicator("WIFI");
-            //ICommunicator communicator = factory.Communicator("LAN");
+            //ICommunicator communicator = factory.Communicator("WIFI");
+            ICommunicator communicator = factory.Communicator("LAN");
             communicator.Subscribe(listener);
 
             string addr = "127.0.0.1";
@@ -30,7 +30,7 @@ namespace Executive
             Thread.Sleep(500); 
             // give the listener time to receive before checking count
 
-            Console.WriteLine($"Total count : {communicator.GetCount()}");
+            Console.WriteLine($"Total count of messages sent : {communicator.GetCount()}");
         }
     }
 }

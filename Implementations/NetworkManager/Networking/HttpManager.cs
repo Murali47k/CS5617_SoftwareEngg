@@ -37,27 +37,7 @@ namespace Networking
 
         public void ListentoData(string addr)
         {
-            TcpListener tcpListener = new TcpListener(IPAddress.Parse(addr), 5000);
-
-            tcpListener.Start();
-
-            Debug.WriteLine($"Listening on {addr}");
-
-            while (true)
-            {
-                TcpClient client = tcpListener.AcceptTcpClient();
-
-                using StreamReader reader = new StreamReader(client.GetStream());
-
-                string message = reader.ReadLine();
-
-                if (listener != null)
-                {
-                    listener.OnMessageReceived(message);
-                }
-
-                client.Close();
-            }
+            Debug.WriteLine($"Listening via HTTP on {addr}");
 
         }
     }
