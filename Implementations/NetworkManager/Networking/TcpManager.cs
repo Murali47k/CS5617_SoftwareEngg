@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Sockets;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,13 +31,34 @@ namespace Networking
 
         public void Listen(string addr)
         {
-            //new Task(() => ListentoData(addr).Start());
-            // Yet to implement the listening functionality
+            Task.Run(() => ListentoData(addr));
         }
 
-        public void ListentoData()
+        public void ListentoData(string addr)
         {
-            // yet to implement the listening functionality
+            TcpListener tcpListener = new TcpListener(IPAddress.Parse(addr), 5000);
+
+            tcpListener.Start();
+
+            Debug.WriteLine($"Listening on {addr}");
+
+            while (true)
+            {
+                TcpClient client = tcpListener.AcceptTcpClient();
+
+                using StreamReader reader = new StreamReader(client.GetStream());
+
+                string message = reader.ReadLine();
+
+                count++;
+
+                if (listener != null)
+                {
+                    listener.OnMessageReceived(message);
+                }
+
+                client.Close();
+            }
         }
     }
 }

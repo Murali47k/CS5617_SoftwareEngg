@@ -7,5 +7,7 @@
         int GetCount();
 
         void Subscribe(IMessageListener l);
+
+        void Listen(string addr);
     }
 }
