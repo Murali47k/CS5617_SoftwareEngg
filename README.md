@@ -25,10 +25,12 @@ This repository contains the coursework, assignments, and projects completed as 
 │
 ├── Lec 3
 │   ├── NetworkManager/
-│   │       └── Added Message Listener and FileWatcher
+│   │       └── Added Message Listener
 │   │
-│   └── DistributedGUI/
-│           └── UML Diagrams
+│   ├── DistributedGUI/
+│   │    └── UML Diagrams
+│   │
+|   └── FileWatcher/
 .
 ```
 
