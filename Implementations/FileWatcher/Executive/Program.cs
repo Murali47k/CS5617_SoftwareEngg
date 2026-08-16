@@ -6,7 +6,8 @@ namespace Executive
     {
         public void OnFileChanged(string content)
         {
-            Console.WriteLine($"changes made : {content}");
+            Console.WriteLine("Updated File Content :");
+            Console.WriteLine($"{content}");
         }
     }
 
