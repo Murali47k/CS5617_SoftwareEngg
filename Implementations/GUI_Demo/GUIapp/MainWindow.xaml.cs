@@ -20,5 +20,11 @@ namespace GUIapp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string message = NameTextBlock.Text;
+            MessageBox.Show(message);
+        }
     }
 }

@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIapp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="IIT PKD" Height="450" Width="800">
     <Grid>
-
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightYellow">
+            <TextBlock Name="NameTextBlock"  Text ="Enter your name:" Margin="10"></TextBlock>
+            <Button Content="Click Me" Foreground="Green" FontSize="12" Margin="10" Click="Button_Click"></Button>
+        </StackPanel>
+        
     </Grid>
 </Window>
