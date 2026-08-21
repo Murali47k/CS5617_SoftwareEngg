@@ -33,6 +33,8 @@ This repository contains the coursework, assignments, and projects completed as 
 │   │    └── UML Diagrams
 │   │
 |   └── FileWatcher/
+│
+├── Lec 4 -> GUI_Demo/
 .
 ```
 

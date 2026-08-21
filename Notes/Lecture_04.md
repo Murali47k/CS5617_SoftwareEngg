@@ -26,15 +26,14 @@ We will be focusing on WPF and XAML:
 
 - There are also events like click which calls a function
 
-- WPF - Windows Presentation Framework is framework in which the `code behind` is running.
+- **WPF** - Windows Presentation Framework is the framework in which the `code behind` is running for `GUI_Demo`.
 
----
 
-**ShortCut**
+```text
+ShortCut :
 
-`<TextBlock></TextBlock>` can be defined as `<TextBlock/>` if nothing is inside the object 
-
----
+<TextBlock></TextBlock> can be defined as <TextBlock/> if nothing is inside the object 
+```
 
 ### Home Work (Not Graded)
 
@@ -42,4 +41,4 @@ We will be focusing on WPF and XAML:
 
 - Not madatory but for learning if needed you can implement all the 23 design patterns
 
-- create a GUI , have two stackpanel in one grid , with different colors for both , stack it vertically.
+
