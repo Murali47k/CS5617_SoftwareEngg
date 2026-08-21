@@ -11,7 +11,9 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 2 : Object Oriented Programming Basics
 |
 ├── Lec 3 : UML (Unified Modeling Language)
-
+|
+├── Lec 4 : GUI Programming
+.
 ```
 
 
