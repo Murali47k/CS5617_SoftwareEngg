@@ -12,7 +12,7 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 3 : UML (Unified Modeling Language)
 |
-├── Lec 4 : GUI Programming
+├── Lec 4 : GUI Programming and Testing
 .
 ```
 
