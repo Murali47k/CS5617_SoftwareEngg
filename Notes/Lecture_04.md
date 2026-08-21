@@ -4,7 +4,11 @@
 
 ### GUI Programming
 
+We will be focusing on WPF and XAML:
+- **WPF** : a UI framework for creating desktop clients application
+- **XAML** : a declarative language that's based on XML , used extensively to build UX
 
+---
 
 ### Home Work (Not Graded)
 
