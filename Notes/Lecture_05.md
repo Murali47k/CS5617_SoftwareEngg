@@ -22,10 +22,11 @@
     - `Serialization` is the technique of converting the state of the object into a form that can be persisted or transported.
     - Technologies which provide Serialization for IPC : Pipes , Socket , UDP / TCP
 
-
-
+<br>
 
 ---
 
 ### WPF and XAML
+
+---
 

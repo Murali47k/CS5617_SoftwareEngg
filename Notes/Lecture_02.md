@@ -14,6 +14,8 @@
 	1. value types , eg : int, bool , float , string , struct etc.
 	1. reference types , eg : reference of a class.
 
+<br>
+
 ---
 
 
@@ -22,6 +24,8 @@
 - **Encapsulation** : Hiding data that user doesnt need to know about ( like private variables , those are implementation details that need not be accesible ).
 - **Inheritance** : The child class inherits all the properties of parent class and upgrade it by overwriting its behaviour.
 - **Polymorphism** (most important feature) : A base class pointer can point to a derived class object.
+
+<br>
 
 ---
 
@@ -34,6 +38,8 @@
 	1. Inherit from class (Inheritance of Implimentaion) : inherits virtual methords from parent class
 	2. Inherit from interface 
 
+<br>
+
 ---
 
 ### Design Patterns
@@ -41,6 +47,8 @@
 - There are 23 design patterns , we will see more in upcoming classes.
 - 1 - Factory design manager
 - Look up Abstract Factory
+
+<br>
 
 ---
 
@@ -57,6 +65,8 @@ Types are implementations and classes
 1. if class is made inside a function then it is aggregation.
 1. Interface is an concept and hence it will be always using or inheritance.
 
+<br>
+
 ---
 
 ### Additional Comments on Code
@@ -68,6 +78,7 @@ Types are implementations and classes
 - OOPs code are better since you can update the code with minimal changes
 - Interface always start with "I" by convention.
 
+<br>
 
 ---
 
@@ -81,5 +92,7 @@ Types are implementations and classes
 - Make a factory also and make it smart enough to change accordingly
 - Executive and Connector module , based on LAN or internet choose.
 - Then Draw the class diagram between all classes as a PNG
+
+<br>
 
 ---

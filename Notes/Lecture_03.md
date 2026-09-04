@@ -17,6 +17,8 @@
 
 - **Class diagram** - already mentioned in lecture 2
 
+<br>
+
 ---
 
 ### SOLID Principles
@@ -30,6 +32,8 @@
 - **Interface segregation principle** - Clients should not need to depend upon interfaces that they do not use  (Note :  interface can depend on another in interface )
 
 - **Dependency inversion principle** - Use abstractions , promote loose coupling
+
+<br>
 
 ---
 
@@ -52,6 +56,9 @@
 
     - Deals with communication between the various classes
     - Example : Chain of Responsibility , Command , Interpreter , Iterator , Mediator , Memento , Observer , State , Stratergy , Template Methord , Visitor
+
+<br>
+
 ---
 
 ### Software Development Life Cycle (SDLC)
@@ -65,12 +72,16 @@
 1. Development 
 1. Maintenance
 
+<br>
+
 --- 
 ### Common SDLC Models 
 
 - Waterfall : all in one go methord and thoroughly planned , mostly used creating softawre like Linux , Kernel etc
 - Agile : With continuos customer feedack and always changing , mostly used in Web Dev 
 - Nowadays most companies prefer to choose a model which is roughly the hybrid of both
+
+<br>
 
 ---
 
@@ -88,6 +99,8 @@
 - Add Listener capabilities for Network Manager made in Lec 2
 
 - Use FileWatcher to Listen on a file by Network Manager , and bubble the message for Network and put it in console app UX. 
+
+<br>
 
 ---
 

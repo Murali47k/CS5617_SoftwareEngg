@@ -10,6 +10,8 @@ We will be focusing on WPF and XAML:
 - **WPF** : a UI framework for creating desktop clients application
 - **XAML** : a declarative language that's based on XML , used extensively to build UX
 
+<br>
+
 ---
 
 ### XAML
@@ -42,6 +44,8 @@ ShortCut :
 - Code needs to be mainatable
 - `.editorconfig` will give you errors , warnings and messaged when linked with solution.
 - Make sure to have 0 errors and minimize warnings
+
+<br>
 
 ---
 
@@ -79,6 +83,7 @@ ShortCut :
 - Substitute and simulate objects that the components in test deal with
 - This is typically done to enable testing various scenarios
 
+<br>
 
 ---
 ### Home Work (Not Graded)
