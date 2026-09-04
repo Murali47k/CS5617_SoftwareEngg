@@ -13,6 +13,8 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 3 : UML (Unified Modeling Language)
 |
 ├── Lec 4 : GUI Programming and Testing
+|
+├── Lec 5 : IPC 
 .
 ```
 
@@ -35,10 +37,26 @@ This repository contains the coursework, assignments, and projects completed as 
 |   └── FileWatcher/
 │
 ├── Lec 4 -> GUI_Demo/
+|
+├── Lec 5 -> GUI_Demo/
+│              └── Added x
 .
 ```
 
-- All work is done via C# in Visual Studio 2022
+### Simple Mini Project : DocsExporter 
+```link
+https://github.com/Murali47k/CS5617-DocumentExporter
+```
+
+### Main Project : On Progress
+```link
+https://github.com/Software-Engineering-CS5617
+```
+
+<br>
+<br>
+
+All work is done via **C# in Visual Studio 2022**
 
 ---
 
