@@ -14,7 +14,7 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 4 : GUI Programming and Testing
 |
-├── Lec 5 : IPC 
+├── Lec 5 : IPC && MVVM
 .
 ```
 
@@ -38,8 +38,7 @@ This repository contains the coursework, assignments, and projects completed as 
 │
 ├── Lec 4 -> GUI_Demo/
 |
-├── Lec 5 -> GUI_Demo/
-│              └── Added x
+├── Lec 5 -> No lab
 .
 ```
 

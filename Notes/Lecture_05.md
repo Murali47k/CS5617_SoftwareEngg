@@ -2,14 +2,16 @@
 
 ## Lecture 5 : Points to remember
 
-### Project Discussion
+### Types of Network
+- **Client–Server:** Clients request services or resources from a central server.
+- **Peer-to-Peer (P2P):** Each device can act as both a client and a server.
+- **Cluster + Server:** Multiple connected computers work together as a cluster and are managed or accessed through a server. 
 
-#### Types of Network
-- Client - Server
-- Peer - Peer
-- Cluster + Server 
+<br>
 
-#### Inter Process Communication (IPC)
+---
+
+### Inter Process Communication (IPC)
 
 - **Inter Object Communication**
     - allows clients to communicate transparently with objects , regardless of where those objects are running (in the same process , on the same computer , or on different computer)
@@ -27,6 +29,24 @@
 ---
 
 ### WPF and XAML
+
+- UX logic mixing with functionalities , make the code unmaintainable.
+- To tackle this problem , there are design patterns 
+    - Model-View-Presenter (MVP)
+    - Model-View-Controller (MVC)
+    - Model-View-ViewModel (MVVM)
+
+<br>
+
+---
+### MVVVM:
+
+- **Model** - Business / Functional logic .
+- **ViewModel** - Is the layer the acts as a bridge between the `View` and the `Model`. It may or may not transforem the raw data from the `Model` into presentable from the `View` 
+- **View** - The GUI that the user sees.
+- **Data Bindings** - Two-way communication between the `View` and the `ViewModel`
+
+<br>
 
 ---
 
