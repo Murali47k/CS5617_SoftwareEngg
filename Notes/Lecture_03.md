@@ -1,7 +1,7 @@
 # Class Notes
 
 
-## Lecture 3 : Points to remeber
+## Lecture 3 : Points to remember
 
 ### UML (Unified Modelling Language)
 

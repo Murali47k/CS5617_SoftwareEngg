@@ -1,6 +1,6 @@
 # Class Notes
 
-## Lecture 4 : Points to remeber
+## Lecture 4 : Points to remember
 
 ### GUI Programming
 

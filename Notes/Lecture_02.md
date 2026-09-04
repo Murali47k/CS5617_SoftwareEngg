@@ -1,7 +1,7 @@
 # Class Notes
 
 
-## Lecture 2 : Points to remeber
+## Lecture 2 : Points to remember
 
 
 ### OOPs 
