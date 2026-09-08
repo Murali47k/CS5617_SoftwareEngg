@@ -38,7 +38,7 @@ This repository contains the coursework, assignments, and projects completed as 
 │
 ├── Lec 4 -> GUI_Demo/
 |
-├── Lec 5 -> No lab
+├── Lec 5 -> Calculator/
 .
 ```
 
