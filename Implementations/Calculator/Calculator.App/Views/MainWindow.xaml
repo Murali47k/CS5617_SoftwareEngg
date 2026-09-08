@@ -56,12 +56,12 @@
             <!-- Row 4 -->
             <Button Grid.Row="3" Grid.Column="0" Content="0" Command="{Binding NumberCommand}" CommandParameter="0"/>
             <Button Grid.Row="3" Grid.Column="1" Content="." Command="{Binding NumberCommand}" CommandParameter="."/>
-            <Button Grid.Row="3" Grid.Column="2" Content="=" Command="{Binding EqualsCommand}"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="C" Command="{Binding ClearCommand}"/>
             <Button Grid.Row="3" Grid.Column="3" Content="+" Command="{Binding OperationCommand}" CommandParameter="+"/>
 
         </Grid>
 
-        <Button Grid.Row="2" Command="{Binding ClearCommand}" Content="Clear"/>
+        <Button Grid.Row="2" Command="{Binding EqualsCommand}" Content="Evaluate"/>
 
     </Grid>
 </Window>
