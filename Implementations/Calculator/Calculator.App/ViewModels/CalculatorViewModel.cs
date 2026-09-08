@@ -10,8 +10,6 @@ namespace Calculator.App.ViewModels
         private readonly CalculatorModel model;
 
         private string display = "0";
-        private double firstNumber;
-        private string operation = "";
 
         public string Display
         {
@@ -37,7 +35,7 @@ namespace Calculator.App.ViewModels
             );
 
             OperationCommand = new RelayCommand(
-                parameter => SetOperation(parameter?.ToString() ?? "")
+                parameter => EnterOperation(parameter?.ToString() ?? "")
             );
 
             EqualsCommand = new RelayCommand(
@@ -61,52 +59,28 @@ namespace Calculator.App.ViewModels
             }
         }
 
-        private void SetOperation(string op)
+        private void EnterOperation(string op)
         {
-            firstNumber = double.Parse(Display);
-
-            operation = op;
-
-            // Display the operation instead of resetting to 0
-            Display = firstNumber + " " + operation + " ";
+            Display += op;
         }
 
         private void Calculate()
         {
-            // Get the second number from the display
-            string[] parts = Display.Split(' ');
-
-            double secondNumber = double.Parse(parts[2]);
-
-            double result = 0;
-
-            switch (operation)
+            try
             {
-                case "+":
-                    result = model.Add(firstNumber, secondNumber);
-                    break;
+                double result = model.Evaluate(Display);
 
-                case "-":
-                    result = model.Subtract(firstNumber, secondNumber);
-                    break;
-
-                case "*":
-                    result = model.Multiply(firstNumber, secondNumber);
-                    break;
-
-                case "/":
-                    result = model.Divide(firstNumber, secondNumber);
-                    break;
+                Display = result.ToString();
             }
-
-            Display = result.ToString();
+            catch
+            {
+                Display = "Error";
+            }
         }
 
         private void Clear()
         {
             Display = "0";
-            firstNumber = 0;
-            operation = "";
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

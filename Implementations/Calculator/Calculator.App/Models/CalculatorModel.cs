@@ -1,4 +1,6 @@
-﻿namespace Calculator.App.Models
+﻿using System.Data;
+
+namespace Calculator.App.Models
 {
     public class CalculatorModel
     {
@@ -23,6 +25,15 @@
                 throw new DivideByZeroException();
 
             return a / b;
+        }
+
+        public double Evaluate(string expression)
+        {
+            DataTable table = new DataTable();
+
+            object result = table.Compute(expression, "");
+
+            return Math.Round(Convert.ToDouble(result),5);
         }
     }
 }
