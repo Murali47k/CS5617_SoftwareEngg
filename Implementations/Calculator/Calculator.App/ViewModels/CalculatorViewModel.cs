@@ -33,11 +33,11 @@ namespace Calculator.App.ViewModels
             model = new CalculatorModel();
 
             NumberCommand = new RelayCommand(
-                parameter => EnterNumber(parameter.ToString())
+                parameter => EnterNumber(parameter?.ToString() ?? "")
             );
 
             OperationCommand = new RelayCommand(
-                parameter => SetOperation(parameter.ToString())
+                parameter => SetOperation(parameter?.ToString() ?? "")
             );
 
             EqualsCommand = new RelayCommand(
@@ -52,21 +52,32 @@ namespace Calculator.App.ViewModels
         private void EnterNumber(string number)
         {
             if (Display == "0")
+            {
                 Display = number;
+            }
             else
+            {
                 Display += number;
+            }
         }
 
         private void SetOperation(string op)
         {
             firstNumber = double.Parse(Display);
+
             operation = op;
-            Display = "0";
+
+            // Display the operation instead of resetting to 0
+            Display = firstNumber + " " + operation + " ";
         }
 
         private void Calculate()
         {
-            double secondNumber = double.Parse(Display);
+            // Get the second number from the display
+            string[] parts = Display.Split(' ');
+
+            double secondNumber = double.Parse(parts[2]);
+
             double result = 0;
 
             switch (operation)
@@ -98,10 +109,10 @@ namespace Calculator.App.ViewModels
             operation = "";
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         private void OnPropertyChanged(
-            [CallerMemberName] string propertyName = null)
+            [CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(
                 this,
