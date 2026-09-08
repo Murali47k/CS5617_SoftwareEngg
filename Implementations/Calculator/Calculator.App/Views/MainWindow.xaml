@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <!-- Display -->
@@ -59,6 +60,8 @@
             <Button Grid.Row="3" Grid.Column="3" Content="+" Command="{Binding OperationCommand}" CommandParameter="+"/>
 
         </Grid>
+
+        <Button Grid.Row="2" Command="{Binding ClearCommand}" Content="Clear"/>
 
     </Grid>
 </Window>
