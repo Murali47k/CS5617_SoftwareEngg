@@ -653,7 +653,7 @@ alice.Send("Hello Bob!"); // Bob receives message
 ---
 
 ### 18. Memento
-**Purpose:** Captures and externalizes an object's internal state to allow restoration.
+**Purpose:** Save and Restore an objects previous state.
 
 ```csharp
 class Editor {
