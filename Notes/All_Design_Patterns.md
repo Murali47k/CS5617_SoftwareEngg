@@ -853,57 +853,53 @@ tea.Prepare(); // Follows template with tea-specific steps
 ---
 
 ### 23. Visitor
-**Purpose:** Represents an operation to be performed on elements of an object structure.
+**Purpose:** Add new operations to object without modifying the class.
 
 ```csharp
-interface IVisitor {
-    void VisitCircle(Circle circle);
-    void VisitRectangle(Rectangle rect);
-}
-
-interface IShape {
+interface IProduct {
     void Accept(IVisitor visitor);
 }
 
-class Circle : IShape {
-    public double Radius { get; set; }
+class Book : IProduct {
     
+    public double Price = 500;
+
     public void Accept(IVisitor visitor) {
-        visitor.VisitCircle(this);
+        visitor.Visit(this);
     }
 }
 
-class Rectangle : IShape {
-    public double Width { get; set; }
-    public double Height { get; set; }
-    
+class Electronics : IProduct {
+
+    public double Price = 20000;
+
     public void Accept(IVisitor visitor) {
-        visitor.VisitRectangle(this);
+        visitor.Visit(this);
     }
 }
 
-class AreaVisitor : IVisitor {
-    public double TotalArea { get; private set; }
-    
-    public void VisitCircle(Circle circle) {
-        TotalArea += Math.PI * Math.Pow(circle.Radius, 2);
+interface IVisitor {
+    void Visit(Book book);
+    void Visit(Electronics electronics);
+}
+
+class TaxVisitor : IVisitor {
+    public void Visit(Book book) {
+        Console.WriteLine("Book tax = " + book.Price * 0.05);
     }
-    
-    public void VisitRectangle(Rectangle rect) {
-        TotalArea += rect.Width * rect.Height;
+
+    public void Visit(Electronics electronics) {
+        Console.WriteLine("Electronics tax = " + electronics.Price * 0.18);
     }
 }
 
 // Usage
-var shapes = new List<IShape> { 
-    new Circle { Radius = 5 }, 
-    new Rectangle { Width = 4, Height = 6 } 
-};
-var visitor = new AreaVisitor();
-foreach (var shape in shapes) {
-    shape.Accept(visitor);
-}
-Console.WriteLine(visitor.TotalArea); // Total area
+Book book = new Book();
+Electronics laptop = new Electronics();
+
+IVisitor tax = new TaxVisitor();
+book.Accept(tax); // Book tax = 25
+laptop.Accept(tax); // Electronics tax = 3600
 ```
 
 ---
