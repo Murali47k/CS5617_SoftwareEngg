@@ -389,6 +389,7 @@ class Tree {
     }
 }
 
+// Usage - Shared the same memory of oak object
 TreeType oak = new TreeType("Oak", "Green", "oak.png");
 Tree tree1 = new Tree(10, 20, oak);
 Tree tree2 = new Tree(50, 80, oak);
