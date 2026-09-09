@@ -371,22 +371,29 @@ class TreeType {
     }
 }
 
-class TreeFactory {
-    private static Dictionary<string, TreeType> treeTypes = new Dictionary<string, TreeType>();
-    
-    public static TreeType GetTreeType(string name, string texture, string color) {
-        string key = $"{name}_{texture}_{color}";
-        if (!treeTypes.ContainsKey(key)) {
-            treeTypes[key] = new TreeType(name, texture, color);
-        }
-        return treeTypes[key];
+class Tree {
+    private int x;
+    private int y;
+    private TreeType type;
+
+    public Tree(int x, int y, TreeType type){
+        this.x = x;
+        this.y = y;
+        this.type = type;
+    }
+
+    public void Display(){
+        Console.WriteLine(
+            $"{type.Name} tree at ({x}, {y})"
+        );
     }
 }
 
-// Usage
-var pineType = TreeFactory.GetTreeType("Pine", "...", "green");
-var tree1 = new Tree(10, 20, pineType);
-var tree2 = new Tree(30, 40, pineType); // Shares type
+TreeType oak = new TreeType("Oak", "Green", "oak.png");
+Tree tree1 = new Tree(10, 20, oak);
+Tree tree2 = new Tree(50, 80, oak);
+Tree tree3 = new Tree(100, 40, oak);
+
 ```
 
 ---
