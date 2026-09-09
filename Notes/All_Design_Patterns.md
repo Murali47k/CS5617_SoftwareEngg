@@ -150,32 +150,27 @@ Deal with the composition of classes and objects to form larger structures.
 
 ```csharp
 // Target Interface
-interface IPrinter
-{
+interface IPrinter{
     void Print();
 }
 
 // Adaptee
-class LegacyPrinter
-{
-    public void PrintDocument()
-    {
+class LegacyPrinter{
+    public void PrintDocument(){
         Console.WriteLine("Legacy Printer is printing a document.");
     }
 }
 
 // Adapter
-class PrinterAdapter : IPrinter
-{
+class PrinterAdapter : IPrinter{
+
     private LegacyPrinter legacyPrinter;
 
-    public PrinterAdapter()
-    {
+    public PrinterAdapter(){
         legacyPrinter = new LegacyPrinter();
     }
 
-    public void Print()
-    {
+    public void Print(){
         legacyPrinter.PrintDocument();
     }
 }
@@ -191,33 +186,69 @@ printer.Print();
 **Purpose:** Separates abstraction from implementation so they can vary independently.
 
 ```csharp
-// Abstraction
-abstract class Shape {
-    protected IRenderer renderer;
-    
-    public Shape(IRenderer renderer) {
-        this.renderer = renderer;
+// Implementation
+interface IColor{
+    void ApplyColor();
+}
+
+class RedColor : IColor{
+
+    public void ApplyColor(){
+        Console.WriteLine("Red");
     }
-    
+}
+
+class BlueColor : IColor{
+
+    public void ApplyColor(){
+        Console.WriteLine("Blue");
+    }
+}
+
+
+// Abstraction
+abstract class Shape{
+
+    protected IColor color;
+
+    public Shape(IColor color){
+        this.color = color;
+    }
+
     public abstract void Draw();
 }
 
-// Implementation
-interface IRenderer {
-    void RenderShape(Shape shape);
+
+// Refined Abstraction
+class Circle : Shape{
+
+    public Circle(IColor color) : base(color){}
+
+    public override void Draw(){
+        Console.Write("Drawing Circle");
+        color.ApplyColor();
+    }
 }
 
-class VectorRenderer : IRenderer {
-    public void RenderShape(Shape shape) { }
-}
+class Square : Shape{
 
-class RasterRenderer : IRenderer {
-    public void RenderShape(Shape shape) { }
+    public Square(IColor color) : base(color){}
+
+    public override void Draw(){
+        Console.Write("Drawing Square");
+        color.ApplyColor();
+    }
 }
 
 // Usage
-var circle = new Circle(new VectorRenderer());
-circle.Draw(); // Renders circle using vector
+Shape circle = new Circle(new RedColor());
+circle.Draw();
+
+Shape square = new Square(new BlueColor());
+square.Draw();
+
+Shape circle2 = new Circle(new BlueColor());
+circle2.Draw();
 ```
 
 ---
