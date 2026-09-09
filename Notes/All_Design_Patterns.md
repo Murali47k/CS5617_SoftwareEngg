@@ -149,32 +149,40 @@ Deal with the composition of classes and objects to form larger structures.
 **Purpose:** Allows incompatible interfaces to work together.
 
 ```csharp
-class EuropeanSocket {
-    public int Voltage => 220;
+// Target Interface
+interface IPrinter
+{
+    void Print();
 }
 
-interface IUsPlug {
-    void Connect(int voltage);
+// Adaptee
+class LegacyPrinter
+{
+    public void PrintDocument()
+    {
+        Console.WriteLine("Legacy Printer is printing a document.");
+    }
 }
 
-class Adapter : EuropeanSocket {
-    private IUsPlug usPlug;
-    
-    public Adapter(IUsPlug usPlug) {
-        this.usPlug = usPlug;
+// Adapter
+class PrinterAdapter : IPrinter
+{
+    private LegacyPrinter legacyPrinter;
+
+    public PrinterAdapter()
+    {
+        legacyPrinter = new LegacyPrinter();
     }
-    
-    public void Connect() {
-        int convertedVoltage = Convert(Voltage, 110);
-        usPlug.Connect(convertedVoltage);
+
+    public void Print()
+    {
+        legacyPrinter.PrintDocument();
     }
-    
-    private int Convert(int from, int to) => to;
 }
 
 // Usage
-var adapter = new Adapter(new UsPlug());
-adapter.Connect(); // US plug gets 110V
+IPrinter printer = new PrinterAdapter();
+printer.Print();
 ```
 
 ---
