@@ -121,17 +121,12 @@ var copy = original.Clone(); // New Circle with radius 5
 ```csharp
 class Database {
     private static Database instance;
-    private static readonly object lockObj = new object();
     
     private Database() { }
     
     public static Database GetInstance() {
         if (instance == null) {
-            lock (lockObj) {
-                if (instance == null) {
-                    instance = new Database();
-                }
-            }
+             instance = new Database();
         }
         return instance;
     }
