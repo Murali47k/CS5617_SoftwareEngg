@@ -687,53 +687,48 @@ editor.Restore(saved); // Content is "Hello" again
 ---
 
 ### 19. Observer
-**Purpose:** Defines a one-to-many dependency where objects are notified of state changes.
+**Purpose:** Notify dependent objects when something changes.
 
 ```csharp
-class Subject {
-    private List<IObserver> observers = new List<IObserver>();
-    private int temperature;
-    
-    public void Attach(IObserver observer) => observers.Add(observer);
-    
-    public int Temperature {
-        get => temperature;
-        set {
-            temperature = value;
-            Notify();
-        }
-    }
-    
-    private void Notify() {
-        foreach (var observer in observers) {
-            observer.Update();
-        }
+interface ISubscriber
+{
+    void Notify(string video);
+}
+
+class Subscriber : ISubscriber
+{
+    public void Notify(string video)
+    {
+        Console.WriteLine("New video: " + video);
     }
 }
 
-interface IObserver {
-    void Update();
+class Channel
+{
+    private List<ISubscriber> subscribers = new List<ISubscriber>();
+
+    public void Subscribe(ISubscriber subscriber)
+    {
+        subscribers.Add(subscriber);
+    }
+
+    public void UploadVideo(string video)
+    {
+        foreach (var subscriber in subscribers)
+            subscriber.Notify(video);
+    }
 }
 
-class PhoneDisplay : IObserver {
-    private Subject weatherStation;
-    
-    public PhoneDisplay(Subject weatherStation) {
-        this.weatherStation = weatherStation;
-    }
-    
-    public void Update() {
-        ShowWeather();
-    }
-    
-    private void ShowWeather() { }
-}
+Channel channel = new Channel();
 
-// Usage
-var station = new Subject();
-var phone = new PhoneDisplay(station);
-station.Attach(phone);
-station.Temperature = 25; // Phone updates automatically
+Subscriber s1 = new Subscriber();
+Subscriber s2 = new Subscriber();
+
+channel.Subscribe(s1);
+channel.Subscribe(s2);
+
+channel.UploadVideo("Fun with C#"); // Both s1 and s2 get notification
+
 ```
 
 ---
