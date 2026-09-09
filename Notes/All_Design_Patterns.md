@@ -496,30 +496,38 @@ interface ICommand {
     void Execute();
 }
 
-class LightOnCommand : ICommand {
-    private Light light;
-    
-    public LightOnCommand(Light light) {
-        this.light = light;
+class TurnOnLightCommand : ICommand {
+    public void Execute() {
+        Console.WriteLine("Light turned ON");
     }
-    
-    public void Execute() => light.On();
 }
 
-class LightOffCommand : ICommand {
-    private Light light;
-    
-    public LightOffCommand(Light light) {
-        this.light = light;
+class TurnOffLightCommand : ICommand {
+    public void Execute() {
+        Console.WriteLine("Light turned OFF");
     }
-    
-    public void Execute() => light.Off();
+}
+
+class Button {
+    private ICommand command;
+
+    public void SetCommand(ICommand command) {
+        this.command = command;
+    }
+
+    public void Press() {
+        command.Execute();
+    }
 }
 
 // Usage
-var remote = new RemoteControl();
-remote.SetCommand(new LightOnCommand(livingRoom));
-remote.PressButton(); // Light turns on
+Button button = new Button();
+
+button.SetCommand(new TurnOnLightCommand());
+button.Press(); // Light Turned ON
+
+button.SetCommand(new TurnOffLightCommand());
+button.Press(); // Light Turned OFF
 ```
 
 ---
