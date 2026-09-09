@@ -719,14 +719,13 @@ class Channel
     }
 }
 
+// Usage 
 Channel channel = new Channel();
-
 Subscriber s1 = new Subscriber();
 Subscriber s2 = new Subscriber();
 
 channel.Subscribe(s1);
 channel.Subscribe(s2);
-
 channel.UploadVideo("Fun with C#"); // Both s1 and s2 get notification
 
 ```
