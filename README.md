@@ -42,6 +42,10 @@ This repository contains the coursework, assignments, and projects completed as 
 .
 ```
 
+### All 23 Design Patterns Guide
+
+[Design Patterns Guide](Notes/All_Design_Patterns.md)
+
 ### Simple Mini Project : DocsExporter 
 ```link
 https://github.com/Murali47k/CS5617-DocumentExporter
