@@ -624,16 +624,16 @@ class ChatRoom {
 }
 
 class User {
-    private ChatRoom mediator;
+    private ChatRoom room;
     private string name;
     
-    public User(ChatRoom mediator, string name) {
-        this.mediator = mediator;
+    public User(ChatRoom room, string name) {
+        this.room = room;
         this.name = name;
     }
     
     public void Send(string message) {
-        mediator.SendMessage(this, message);
+        room.SendMessage(this, message);
     }
     
     public void Receive(string message) {
