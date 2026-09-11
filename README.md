@@ -41,6 +41,8 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 4 -> GUI_Demo/
 |
 ├── Lec 5 -> Calculator/
+|
+├── Lec 6 -> < No Lab >
 .
 ```
 

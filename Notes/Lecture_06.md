@@ -48,6 +48,8 @@ Notepad → MP3 Player → Browser → Notepad → MP3 Player → ...
 - This switching is called *context switching*.
 - The technique of sharing CPU time among multiple processes/threads is called *time sharing*.
 
+<br>
+
 ---
 
 ### Processes
@@ -58,6 +60,8 @@ A process is a program that is currently being executed.
 - A process contains at least one thread.
 - The first thread created when a process starts is commonly called the primary/main thread.
 - Threads within a process share many of the process's resources, especially its address space.
+
+<br>
 
 ---
 
@@ -80,5 +84,19 @@ A thread is the smallest unit of execution that can be independently scheduled b
 | Relatively heavyweight       | Relatively lightweight                                |
 | Contains one or more threads | Exists within a process                               |
 | Resource container           | Unit of execution                                     |
+|
 
+#### Race Condition 
+A situation where multiple threads access and modify shared data simultaneously, causing the final result to depend on the order/timing of execution.
+
+
+---
+
+### Home Work (Not Graded)
+
+- Try implementing a Threading and Lock example in C#
+
+<br>
+
+---
 
