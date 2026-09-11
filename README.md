@@ -15,6 +15,8 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 4 : GUI Programming and Testing
 |
 ├── Lec 5 : IPC && MVVM
+|
+├── Lec 6 : Threads , Processes and Interprocess Communication
 .
 ```
 
