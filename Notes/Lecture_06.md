@@ -65,7 +65,7 @@ A process is a program that is currently being executed.
 
 ---
 
-### 5. Threads
+### Threads
 
 A thread is the smallest unit of execution that can be independently scheduled by the operating system.
 
