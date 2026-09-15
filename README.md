@@ -17,6 +17,8 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 5 : IPC && MVVM
 |
 ├── Lec 6 : Threads , Processes and Interprocess Communication
+|
+├── Lec 7 : 
 .
 ```
 
@@ -43,6 +45,8 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 5 -> Calculator/
 |
 ├── Lec 6 -> < No Lab >
+|
+├── Lec 7 -> GUI (file reader)
 .
 ```
 
