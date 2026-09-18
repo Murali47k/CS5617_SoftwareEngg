@@ -18,7 +18,7 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 6 : Threads , Processes and Interprocess Communication
 |
-├── Lec 7 : 
+├── Lec 7 : More about MVVM and Thread Scheduling
 .
 ```
 
