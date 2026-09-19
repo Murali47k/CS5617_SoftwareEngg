@@ -18,7 +18,7 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 6 : Threads , Processes and Interprocess Communication
 |
-├── Lec 7 : More about MVVM and Thread Scheduling
+├── Lec 7 : More about MVVM and Threads
 .
 ```
 
@@ -44,9 +44,9 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 5 -> Calculator/
 |
-├── Lec 6 -> < No Lab >
+├── Lec 6 -> Threads/
 |
-├── Lec 7 -> GUI (file reader)
+├── Lec 7 -> GUI/ (aka File Reader)
 .
 ```
 
