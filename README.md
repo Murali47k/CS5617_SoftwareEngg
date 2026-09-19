@@ -65,7 +65,6 @@ https://github.com/Software-Engineering-CS5617
 ```
 
 <br>
-<br>
 
 All work is done via **C# in Visual Studio 2022**
 
