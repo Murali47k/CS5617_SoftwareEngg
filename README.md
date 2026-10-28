@@ -21,6 +21,10 @@ This repository contains the coursework, assignments, and projects completed as 
 ├── Lec 7 : More about MVVM and Threads
 |
 ├── Lec 8 -> Cloud Programming
+|
+├── Lec 9 -> More Multi Threading
+|
+├── Lec 10 -> .NET Framework
 .
 ```
 
@@ -50,7 +54,11 @@ This repository contains the coursework, assignments, and projects completed as 
 |
 ├── Lec 7 -> GUI/ (aka File Reader)
 |
-├── Lec 8 -> 
+├── Lec 8 -> /
+|
+├── Lec 9 -> /
+|
+├── Lec 10 -> AzureFunApp/
 .
 ```
 
