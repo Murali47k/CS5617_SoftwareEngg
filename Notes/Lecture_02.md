@@ -23,7 +23,7 @@
 - **Abstraction** : Principle of exposing only the required methords and fields without going into much details.
 - **Encapsulation** : Hiding data that user doesnt need to know about ( like private variables , those are implementation details that need not be accesible ).
 - **Inheritance** : The child class inherits all the properties of parent class and upgrade it by overwriting its behaviour.
-- **Polymorphism** (most important feature) : A base class pointer can point to a derived class object.
+- **Polymorphism** (most important feature) :  It allows a single interface or method to behave differently depending on the object or data type it interacts with, improving code flexibility and reusability.
 
 <br>
 
