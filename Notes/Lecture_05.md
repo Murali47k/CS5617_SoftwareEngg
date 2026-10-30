@@ -39,10 +39,10 @@
 <br>
 
 ---
-### MVVVM:
+### MVVM:
 
 - **Model** - Business / Functional logic .
-- **ViewModel** - Is the layer the acts as a bridge between the `View` and the `Model`. It may or may not transforem the raw data from the `Model` into presentable from the `View` 
+- **ViewModel** - Is the layer the acts as a bridge between the `View` and the `Model`. It may or may not transform the raw data from the `Model` into presentable from the `View` 
 - **View** - The GUI that the user sees.
 - **Data Bindings** - Two-way communication between the `View` and the `ViewModel`
 
