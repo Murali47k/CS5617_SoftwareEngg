@@ -139,13 +139,6 @@ Inter-Object Communication allows objects to communicate across processes or dev
 - An operating system can provide mechanisms to make an object accessible remotely, similar to a **Remote Procedure Call (RPC)**.
 - Marshalling involves preparing parameters and objects for communication between processes. Serialization is commonly part of this process.
 
-**Important:** Ask Raagam for notes.
-
-#### Homework
-
-- Implement Inter-Object Communication using Java RPC, WCF, or .NET remoting.
-- WCF was mentioned as the preferred option.
-
 ---
 
 ### Serialized Message Passing
