@@ -31,7 +31,7 @@ flowchart TD
 
 1. **Garbage Collection**: Automatically manages memory and releases memory occupied by objects that are no longer needed.
 2. **Code Optimization**: JIT compiler optimizes code for execution.
-3. **Security: Provides runtime checks, type safety, and security-related services.
+3. **Security** : Provides runtime checks, type safety, and security-related services.
 4. **Portability**: MSIL can run on different platforms that support a compatible .NET runtime.
 5. **Exception Handling**: Provides a common mechanism for handling runtime errors.
 6. **Language Interoperability**: Allows code written in different .NET languages, such as C# and VB.NET, to interact.
